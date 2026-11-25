@@ -1,33 +1,29 @@
 # WorkDesk – Employee, Task & Support Management System
 
-A full-stack web application designed to simplify employee management, task allocation, leave management and workplace support operations.
+A full-stack web application for managing employees, tasks, leave requests, performance reviews, and workplace support operations through a centralized platform.
 
 ## Overview
 
-WorkDesk is a role-based management application that provides a centralized platform for administrators and employees.
+WorkDesk is a role-based employee management system designed to simplify day-to-day organizational activities.
 
-Administrators can manage employees, assign tasks, review performance and handle support requests, while employees can manage their tasks, apply for leaves and raise support tickets.
+It provides separate functionalities for administrators and employees, helping organizations manage employee information, assign and track tasks, process leave requests, monitor performance, and handle support tickets.
 
 ## Key Features
 
 ### Authentication & Authorization
 - Employee registration and login
 - JWT-based authentication
-- Role-based access control (Admin and Employee)
+- Role-based access control
 - Protected application routes
 
 ### Employee Management
-- Add new employees
-- View employee records
-- Update employee information
-- Delete employee records
-- Search and filter employees
+- Add, view, update, and delete employee records
+- Search and filter employee information
 
 ### Task Management
 - Create and assign tasks
-- Track task progress
+- Track task progress and status
 - Manage task priorities and deadlines
-- Update task status
 - Task workload and recommendation functionality
 
 ### Leave Management
@@ -40,7 +36,7 @@ Administrators can manage employees, assign tasks, review performance and handle
 - Raise support tickets
 - Manage ticket priorities and statuses
 - Assign tickets to administrators
-- Exchange messages on support tickets
+- Exchange messages through support tickets
 
 ### Performance Management
 - Create employee performance reviews
@@ -67,19 +63,36 @@ Administrators can manage employees, assign tasks, review performance and handle
 | API Testing | Postman |
 | Version Control | Git, GitHub |
 
-## Project Architecture
+## System Architecture
 
-The application follows a three-layer architecture:
+WorkDesk follows a three-layer architecture:
 
-1. **Frontend:** React and TypeScript provide the user interface and communicate with backend APIs.
-2. **Backend:** Node.js and Express handle API requests, authentication, authorization and application logic.
-3. **Database:** MySQL stores employee, task, leave, ticket and performance information.
+1. **Frontend:** React and TypeScript provide the user interface and handle user interactions.
+2. **Backend:** Node.js and Express.js handle API requests, authentication, authorization, and business logic.
+3. **Database:** MySQL stores and manages application data.
 
-Frontend → REST API → Backend → MySQL Database
+### Application Flow
+
+```text
+        User
+         |
+         v
+ React Frontend
+         |
+         | HTTP Requests (Axios)
+         v
+ Express REST APIs
+         |
+         v
+ Authentication & Business Logic
+         |
+         v
+    MySQL Database
+```
 
 ## Database Design
 
-The project uses MySQL with the following tables:
+The application uses MySQL with the following tables:
 
 - roles
 - users
@@ -114,7 +127,6 @@ WorkDesk/
 │   ├── app.js
 │   └── package.json
 │
-├── screenshots/
 ├── .gitignore
 └── README.md
 ```
@@ -130,28 +142,31 @@ WorkDesk/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/workdesk-employee-management-system.git
-cd workdesk-employee-management-system
+git clone https://github.com/Anjali163/WorkDesk-employee-management-system.git
+cd WorkDesk-employee-management-system
 ```
 
 ### 2. Configure the Database
 
-Open MySQL Workbench and execute:
+1. Open MySQL Workbench.
+2. Execute the SQL script:
 
-`backend/database/schema.sql`
+```text
+backend/database/schema.sql
+```
 
-**Note:** The schema script drops an existing database named `workdesk` before recreating it. Back up any existing data before executing it.
+**Important:** The schema script drops an existing database named `workdesk` before recreating it. Back up existing data before executing it.
 
-### 3. Configure the Backend
+### 3. Configure and Run the Backend
 
 ```bash
 cd backend
 npm install
 ```
 
-Copy `.env.example` to `.env` and configure your MySQL credentials and JWT secret.
+Configure the backend environment variables in a local `.env` file.
 
-Run the seed script once:
+Run the seed script if required:
 
 ```bash
 npm run seed
@@ -165,7 +180,7 @@ npm run dev
 
 Backend URL: `http://localhost:5000`
 
-### 4. Configure the Frontend
+### 4. Configure and Run the Frontend
 
 Open another terminal:
 
@@ -174,7 +189,7 @@ cd frontend
 npm install
 ```
 
-Copy `.env.example` to `.env` if you need to configure a different API URL.
+Configure the frontend environment variables if required.
 
 Start the frontend:
 
@@ -184,25 +199,17 @@ npm run dev
 
 Frontend URL: `http://localhost:5173`
 
-## Demo Login
-
-After successfully running the database seed script:
-
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@workdesk.com | Password@123 |
-| Employee | riya@workdesk.com | Password@123 |
-
-These are local demonstration credentials only. Do not use them for a deployed application.
+*Note: Use the environment variable names and npm scripts defined in the respective project files.*
 
 ## API Documentation
 
-Detailed API endpoints, HTTP methods and access permissions are documented in:
+API endpoints, HTTP methods, and access permissions are documented in:
 
 `backend/API.md`
 
 ## Screenshots
 
+Application screenshots will be added here to demonstrate the user interface and major functionalities.
 
 ## Future Enhancements
 
@@ -218,8 +225,8 @@ Detailed API endpoints, HTTP methods and access permissions are documented in:
 
 Full-Stack Development Project
 
-GitHub: https://github.com/Anjali163
+[GitHub Profile](https://github.com/Anjali163)
 
 ---
 
-If you find this project useful, feel free to explore the code and its implementation.
+If you find this project interesting, feel free to explore the repository and its implementation.
