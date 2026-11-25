@@ -218,7 +218,7 @@ Detailed API endpoints, HTTP methods and access permissions are documented in:
 
 Full-Stack Development Project
 
-GitHub: [Your GitHub Profile](https://github.com/YOUR_USERNAME)
+GitHub: https://github.com/Anjali163
 
 ---
 
