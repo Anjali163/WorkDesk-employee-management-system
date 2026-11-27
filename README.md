@@ -207,9 +207,42 @@ API endpoints, HTTP methods, and access permissions are documented in:
 
 `backend/API.md`
 
+
 ## Screenshots
 
-Application screenshots will be added here to demonstrate the user interface and major functionalities.
+### 1. Login Page
+![WorkDesk Login](screenshots/login.png)
+
+### 2. Registration Page
+![WorkDesk Registration](screenshots/registration.png)
+
+### 3. Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### 4. Admin Dashboard – Detailed View
+![Admin Dashboard Details](screenshots/admin-dashboard-details.png)
+
+### 5. Employee Dashboard
+![Employee Dashboard](screenshots/employee-dashboard.png)
+
+### 6. Employee Management
+![Employee Management](screenshots/employee-management.png)
+
+### 7. Task Management
+![Task Management](screenshots/task-management.png)
+
+### 8. Leave Management
+![Leave Management](screenshots/leave-management.png)
+
+### 9. Support Ticket Management
+![Support Ticket Management](screenshots/support-tickets.png)
+
+### 10. Performance Management – Admin View
+![Admin Performance Reviews](screenshots/performance-management.png)
+
+### 11. Performance Management – Employee View
+![Employee Performance](screenshots/employee-performance.png)
+
 
 ## Future Enhancements
 
